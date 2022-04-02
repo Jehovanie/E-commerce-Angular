@@ -1,0 +1,51 @@
+<app-nav></app-nav>
+<div class="container">
+    <div class="row d-flex justify-content-center align-items-center mt-5">
+        <div class="col-md-6">
+            <div class="card px-5 py-5" id="form1">
+                <div class="card-title">
+                    <h4> Inscrivez-vous  ... </h4>
+                </div>
+                <form class="form-data"
+                      [formGroup]="formRegister"
+                      (submit)="onSubmit(formRegister)">
+
+                    <div class="forms-inputs mb-4">
+                        <span>Username</span>
+                        <input type="text" 
+                               class="form-control" 
+                               formControlName="username">
+                    </div>
+                    <div class="forms-inputs mb-4">
+                        <span>Lastname</span>
+                        <input type="text" 
+                               class="form-control" 
+                               formControlName="lastname">
+                    </div>
+                    <div class="forms-inputs mb-4">
+                        <span>Email</span>
+                        <input type="text" 
+                               class="form-control" 
+                               formControlName="email">
+                    </div>
+                    <div class="forms-inputs mb-4">
+                        <span>Password</span>
+                        <input type="password" 
+                               class="form-control" 
+                               formControlName="password">
+                    </div>
+                    <div class="forms-inputs mb-4">
+                        <span>Confirmer votre mot de pass</span>
+                        <input type="password" 
+                               class="form-control" 
+                               formControlName="fixpassword">
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-dark w-100">Se Inscrire</button>
+                    </div>
+                </form>
+                <span class="d-block right"> Si vous avez  un compte <a routerLink="/login">Connectez-vous</a></span>
+            </div>
+        </div>
+    </div>
+</div>

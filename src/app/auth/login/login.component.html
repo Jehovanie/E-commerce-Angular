@@ -1,0 +1,27 @@
+<app-nav></app-nav>
+<div class="container">
+    <div class="row d-flex justify-content-center align-items-center mt-5">
+        <div class="col-md-6">
+            <div class="card px-5 py-5" id="form1">
+                <div class="card-title">
+                    <h4> Bienvenu sur notre plateform ... </h4>
+                </div>
+                <form class="form-data" (ngSubmit)="onSubmit()">
+                    <div class="forms-inputs mb-4">
+                        <span>Email</span>
+                        <input type="text" class="form-control" name="email" [(ngModel)]="email" id="email">
+                    </div>
+                    <div class="forms-inputs mb-4">
+                        <span>Password</span>
+                        <input type="password" class="form-control" name="password" [(ngModel)]="password"
+                            id="password">
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-dark w-100">Se Connecter</button>
+                    </div>
+                </form>
+                <span> Si vous n'avez pas inscrit  <a routerLink="/register"> clickez-ici</a></span>
+            </div>
+        </div>
+    </div>
+</div>
