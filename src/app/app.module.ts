@@ -9,6 +9,10 @@ import { NavComponent } from './components/nav/nav.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './auth/register/register.component';
 import { RouterModule } from '@angular/router';
+import { AboutComponent } from './pages/about/about.component';
+import { AdminComponent } from './users/admin/admin.component';
+import { OtherComponent } from './users/other/other.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { RouterModule } from '@angular/router';
     LoginComponent,
     HomeComponent,
     NavComponent,
-    RegisterComponent
+    RegisterComponent,
+    AboutComponent,
+    AdminComponent,
+    OtherComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
