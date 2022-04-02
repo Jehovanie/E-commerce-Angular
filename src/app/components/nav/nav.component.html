@@ -1,5 +1,32 @@
-<nav class="navbar navbar-dark bg-dark px-5">
-    <a class="navbar-brand" href="#">
-        Logo
-    </a>
+<nav class="cc-navbar navbar navbar-expand-lg navbar-dark bg-dark w-100">
+    <div class="container-fluid">
+        <a class="navbar-brand text-uppercase mx-4 py-3 fw-bolder"  routerLink="/home">Hi'Clo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item pe-4">
+                    <a class="nav-link active" aria-current="page"  routerLink="/home">Home</a>
+                </li>
+                <li class="nav-item pe-4">
+                    <a class="nav-link" (click)="goToDashBoard()" >Dashboard</a>
+                </li>
+                <li class="nav-item pe-4">
+                    <a class="nav-link" routerLink="/about">About</a>
+                </li>
+                <li class="nav-item pe-4">
+                    <a *ngIf="!authService.isLoggedIn()"
+                        class="btn btn-info rounded-2"  
+                        routerLink="/login">Se Connecter</a>
+
+                    <a *ngIf="authService.isLoggedIn()" 
+                        class="btn btn-info rounded-2"  
+                        routerLink="/login">Se Déconnecter</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
