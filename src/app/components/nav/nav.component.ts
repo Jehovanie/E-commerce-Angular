@@ -25,4 +25,13 @@ export class NavComponent implements OnInit {
             this.router.navigate(['/login']);
         }
     }
+
+    logout() {
+        this.authService.logout()
+            .subscribe(res => {
+                if (!res.success) {
+                    this.router.navigate(['/home']);
+                }
+            })
+    }
 }

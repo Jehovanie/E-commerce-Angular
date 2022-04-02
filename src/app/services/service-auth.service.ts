@@ -8,8 +8,13 @@ export class ServiceAuthService {
 
     admin: any = {
         email: "admin@gmail.com",
-        pass: "adminadmin"
+        password: "admin"
     };
+
+    user: any = {
+        email: "user@gmail.com",
+        password: "user"
+    }
 
     isLogin = false;
     roleAs!: string | null;

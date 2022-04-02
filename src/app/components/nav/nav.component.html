@@ -24,7 +24,7 @@
 
                     <a *ngIf="authService.isLoggedIn()" 
                         class="btn btn-info rounded-2"  
-                        routerLink="/login">Se Déconnecter</a>
+                        (click)="logout()">Se Déconnecter</a>
                 </li>
             </ul>
         </div>

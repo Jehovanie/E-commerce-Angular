@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { ServiceAuthService } from 'src/app/services/service-auth.service';
 
 @Component({
     selector: 'app-login',
@@ -10,38 +11,44 @@ export class LoginComponent implements OnInit {
 
     email !: string;
     password !: number;
+    error!: any;
 
-    constructor(private router: Router) { }
+    @ViewChild('closedModal') closeModal!: ElementRef
+
+    constructor(private router: Router, private authService: ServiceAuthService) {
+        console.log("--------------------");
+        console.log(this.authService.admin);
+        console.log("--------------------");
+
+    }
 
     ngOnInit(): void {
     }
 
+    login(val: string) {
+        this.authService.login(val).subscribe(res => {
+            if (res.success) {
+                this.closeModal.nativeElement.click();
+            }
+        });
+    }
+
     onSubmit() {
 
-        /*
-            objective de demain :
-                1 - generate une fonction qui hashe un mots de passe
-                2 - traite une formulaire avant de rediriger dans un page home
-                
-        */
+        // const regex = /^[^\s@]+@[^\s@]{2,}$/i;
+        if (this.email === this.authService.admin.email && this.password === this.authService.admin.password) {
 
-        const regex = /^[^\s@]+@[^\s@]{2,}$/i;
+            this.login('ROLE_ADMIN');
+            this.router.navigate(['/admin']);
+        } else if (this.email === this.authService.user.email && this.password === this.authService.user.password) {
 
-        if (regex.test(this.email)) {
-            console.log("this email is good ... ")
+            this.login('ROLE_USER');
+            this.router.navigate(['/user']);
         } else {
-            console.log("this email is not good ... ")
         }
-
-        console.log(this.email);
-        console.log(this.password);
-
-        const user = {
-            email: this.email,
-            pawsword: this.password
-        }
-
-        this.router.navigateByUrl('/dasboard');
+        // this.router.navigateByUrl('/dasboard');
     }
+
+
 
 }
