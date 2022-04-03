@@ -7,6 +7,7 @@ import { AdminComponent } from './users/admin/admin.component';
 import { GuardAuthGuard } from './guard/guard-auth.guard';
 import { OtherComponent } from './users/other/other.component';
 import { AboutComponent } from './pages/about/about.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
@@ -15,7 +16,9 @@ const routes: Routes = [
   { path: "about", component: AboutComponent },
   { path: "admin", component: AdminComponent, canActivate: [GuardAuthGuard], data: { role: 'ROLE_ADMIN' } },
   { path: "user", component: OtherComponent, canActivate: [GuardAuthGuard], data: { role: 'ROLE_USER' } },
-  { path: "register", component: RegisterComponent }
+  { path: "register", component: RegisterComponent },
+  { path: "**", component: NotFoundComponent }
+
 ];
 
 @NgModule({
