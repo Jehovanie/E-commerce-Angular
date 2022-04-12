@@ -18,6 +18,8 @@
 .cc-navbar .nav-link {
 	border-bottom: 1px solid transparent;
 	transition: padding-bottom 0.4s ease-in-out, border-color 0.3s ease;
+	user-select: none;
+	cursor: pointer;
 }
 
 .cc-navbar .nav-link:hover {
