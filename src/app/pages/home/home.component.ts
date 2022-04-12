@@ -8,7 +8,7 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class HomeComponent implements OnInit {
 
-  scouters !: any;
+  scooters !: any;
   informatiques !: any;
   cars !: any;
 
@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.scouters = this.db.getDataScouter();
+    this.scooters = this.db.getDataScouter();
     this.informatiques = this.db.getDataInfo();
     this.cars = this.db.getDataCar();
   }

@@ -15,7 +15,8 @@ import { OtherComponent } from './users/other/other.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSliderModule } from '@angular/material/slider'
+import { MatSliderModule } from '@angular/material/slider';
+import { CardComponent } from './components/card/card.component'
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MatSliderModule } from '@angular/material/slider'
     AdminComponent,
     OtherComponent,
     FooterComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

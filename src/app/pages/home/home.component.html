@@ -1,23 +1,40 @@
 <app-nav></app-nav>
-
 <div class="container mt-5">
-    <div class="content-car">
+    <div class="content">
         <div class="content-title">
             <h1> Car Accessory</h1>
-            <ul>
-                <li *ngFor="let car of cars">
-                    <div class="card">
-                        <img class="card-img-top" src={{car.image}} alt="Card image cap">
-                        <div class="card-body">
-                            <h1>
-                            {{car.name}}
-                            </h1>
-                            <p class="card-text">{{car.description}}</p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+            <hr />
+            <div class="row">
+                <div class="d-flex col-md-12 col-sm-6">
+                    <app-card *ngFor="let car of cars" [element] = "car">
+                    </app-card>
+                </div>
+            </div>
         </div>
     </div>
-
+    <div class="content">
+        <div class="content-title">
+            <h1> Scooter Accessory</h1>
+            <hr />
+            <div class="row">
+                <div class="d-flex col-md-12 col-sm-6">
+                    <app-card *ngFor="let scooter of scooters" [element] = "scooter">
+                    </app-card>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-title">
+            <h1> Informatique Accessory</h1>
+            <hr />
+            <div class="row">
+                <div class="d-flex col-md-12 col-sm-6">
+                    <app-card *ngFor="let info of informatiques" [element] = "info">
+                    </app-card>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 </div>

@@ -1,4 +1,5 @@
-.content-car {
+.content {
+    margin-bottom: 25px;
 
     .content-title {
 
@@ -10,23 +11,5 @@
                 sans-serif;
         }
 
-    }
-
-    ul {
-        list-style-type: none;
-        display: flex;
-
-        li {
-
-            .card {
-
-                img {
-                    width: 100%;
-                    height: 150px;
-                }
-            }
-
-
-        }
     }
 }
