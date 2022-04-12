@@ -1,20 +1,23 @@
 <app-nav></app-nav>
-<div class="container mt-5">
-    <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-    <hr>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eligendi aut exercitationem adipisci impedit eos, vel ratione quos, sunt iusto fugiat animi rerum distinctio, quo cumque obcaecati doloremque esse quaerat!
-        Itaque quis saepe placeat! Aperiam eos laudantium doloribus, voluptas consequuntur, tempora ab numquam impedit esse aliquid non, odit reiciendis quos dolore dicta magni quis provident a nobis obcaecati. Eum, sapiente!
-        Dolore, laboriosam non obcaecati exercitationem delectus blanditiis quos ipsam aut magnam eaque architecto, veniam deleniti aspernatur! Vel amet nesciunt vitae explicabo, sint, maiores provident harum, sapiente labore magnam nostrum perspiciatis!
-    </p>
-    <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae perferendis dicta repellat quibusdam omnis sed porro natus, possimus dolorem modi voluptatem tempora molestiae aliquid quod non nemo tenetur! Est, repellendus.
-        Eum repellat corporis animi omnis doloribus inventore velit iste corrupti laboriosam ab aspernatur, praesentium ad hic ea maiores repudiandae exercitationem cumque quam officiis, reiciendis quaerat veritatis nostrum ipsa suscipit! Earum.
-        Aut, quod voluptatibus consequuntur cupiditate qui eaque deleniti consequatur natus pariatur, laborum fuga distinctio ullam voluptas obcaecati eligendi debitis. Recusandae magnam sequi quia exercitationem repudiandae, officiis reiciendis eligendi. Reiciendis, ex?
-        Consequatur placeat reiciendis dolorem soluta unde blanditiis sed hic laudantium repellat minus! Facere, magnam quia, quam cumque voluptas fugiat perferendis necessitatibus omnis doloribus ab officiis eaque est soluta in nemo.
-        Molestiae, optio aperiam facere laudantium cum ipsa quasi incidunt? Fugiat, nulla reprehenderit. Officia voluptates temporibus rem sit aliquid? Ipsam esse veritatis laboriosam quisquam harum magni quod placeat, similique amet nobis.
-    </p>
 
-    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ratione molestiae iure in natus ipsa officiis! Sit excepturi dolorum repellendus? Incidunt facilis fuga culpa totam fugit alias, eum pariatur neque!
-    Possimus at asperiores voluptate quod pariatur neque, optio aut aliquid, praesentium iste numquam quibusdam dicta assumenda consectetur? Ipsam rem, ratione vitae, saepe eaque, quisquam quidem illo amet culpa dolore possimus!</p>
+<div class="container mt-5">
+    <div class="content-car">
+        <div class="content-title">
+            <h1> Car Accessory</h1>
+            <ul>
+                <li *ngFor="let car of cars">
+                    <div class="card">
+                        <img class="card-img-top" src={{car.image}} alt="Card image cap">
+                        <div class="card-body">
+                            <h1>
+                            {{car.name}}
+                            </h1>
+                            <p class="card-text">{{car.description}}</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
 </div>
