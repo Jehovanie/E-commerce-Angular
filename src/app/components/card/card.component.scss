@@ -1,6 +1,7 @@
 .element-card {
     transition: .6s;
     position: relative;
+    cursor: pointer;
 
     img {
         width: 100%;
@@ -33,18 +34,18 @@
     }
 
     &:hover::after {
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus animi dolorem fugit vitae laudantium in !";
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus animi dolorem fugit vitae laudantium in ! <button>Bouton </button>";
         opacity: 1;
         color: white;
 
         width: 100%;
 
         font-weight: 400;
-        animation: scrollCard 0.2s linear forwards;
+        animation: scrollCard 0.5s linear forwards;
 
         background-color: #3b414a;
         position: absolute;
-        bottom: 0%;
+        bottom: 0px;
 
         padding: 25px;
 
@@ -54,7 +55,7 @@
 
 @keyframes scrollCard {
     0% {
-        height: 10%;
+        height: 0%;
     }
 
     10% {

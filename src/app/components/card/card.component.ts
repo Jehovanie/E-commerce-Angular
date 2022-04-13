@@ -17,4 +17,8 @@ export class CardComponent implements OnInit {
 
   }
 
+  handleClick() {
+    console.log("clicked ... ")
+  }
+
 }
