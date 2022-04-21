@@ -1,5 +1,5 @@
 <div class="d-block">
-    <div class=" card element-card" (click)="handleClick">
+    <div class="card element-card">
         <img class="card-img-top" src={{element.image}} alt="Card image cap">
 
         <div class="card-body">
@@ -18,7 +18,7 @@
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, fugiat?
                     </p>
-                    <button class="btn btn-primary"> Read more ...</button>
+                    <button class="btn btn-primary" (click)="handleClick()"> Read more ...</button>
                 </div>
             </div>
         </div>
