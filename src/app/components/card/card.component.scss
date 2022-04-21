@@ -10,18 +10,24 @@
 
     .card-body {
 
+        .card-content {
 
-        .content-title {
-            display: flex;
-            align-items: center;
+            .content-title {
+                display: flex;
+                align-items: center;
 
-            span img {
-                width: 20px;
-                height: 20px
+                span img {
+                    width: 20px;
+                    height: 20px
+                }
+
+                h1 {
+                    margin: 5px 10px;
+                }
             }
 
-            h1 {
-                margin: 5px 10px;
+            .card-after {
+                display: none;
             }
         }
     }
@@ -31,24 +37,24 @@
     &:hover {
         opacity: 0.8;
         transition: 0.6s;
-    }
 
-    &:hover::after {
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus animi dolorem fugit vitae laudantium in ! <button>Bouton </button>";
-        opacity: 1;
-        color: white;
+        .card-body .card-content .card-after {
+            display: block;
+            opacity: 1;
+            color: white;
 
-        width: 100%;
+            width: 100%;
 
-        font-weight: 400;
-        animation: scrollCard 0.5s linear forwards;
+            font-weight: 400;
+            animation: scrollCard 0.5s linear forwards;
 
-        background-color: #3b414a;
-        position: absolute;
-        bottom: 0px;
+            background-color: #3b414a;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
 
-        padding: 25px;
-
+            padding: 25px;
+        }
     }
 }
 
@@ -56,45 +62,56 @@
 @keyframes scrollCard {
     0% {
         height: 0%;
+        overflow-y: hidden;
     }
 
     10% {
         height: 10%;
+        overflow-y: hidden;
     }
 
     20% {
         height: 20%;
+        overflow-y: hidden;
     }
 
     30% {
         height: 30%;
+        overflow-y: hidden;
     }
 
     40% {
         height: 40%;
+        overflow-y: hidden;
     }
 
     50% {
         height: 50%;
+        overflow-y: hidden;
     }
 
     60% {
         height: 60%;
+        overflow-y: hidden;
     }
 
     70% {
         height: 70%;
+        overflow-y: hidden;
     }
 
     80% {
         height: 80%;
+        overflow-y: hidden;
     }
 
     90% {
         height: 90%;
+        overflow-y: hidden;
     }
 
     100% {
         height: 100%;
+        overflow-y: hidden;
     }
 }
