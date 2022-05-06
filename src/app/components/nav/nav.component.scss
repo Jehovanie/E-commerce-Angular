@@ -22,10 +22,30 @@
 	cursor: pointer;
 }
 
-.cc-navbar .nav-link:hover {
-	padding-bottom: 20px;
-	border-bottom-color: var(--bs-teal);
+.link {
+	display: block;
+	transition: .5s !important;
+
+	&::after {
+		content: "";
+		display: block;
+		padding-top: 5px;
+		border-bottom: 2px solid white;
+		transition: .5s;
+	}
+
+	&:hover {
+		font-weight: bolder;
+		transform: scale(1.2);
+		transform-origin: center;
+
+		&::after {
+			border-bottom: 2px solid rgb(0, 186, 243);
+		}
+	}
 }
+
+
 
 .order-form {
 	height: 500px;
