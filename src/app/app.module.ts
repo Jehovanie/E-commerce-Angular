@@ -10,15 +10,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './auth/register/register.component';
 import { RouterModule } from '@angular/router';
 import { AboutComponent } from './pages/about/about.component';
-import { AdminComponent } from './users/admin/admin.component';
-import { OtherComponent } from './users/other/other.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { CardComponent } from './components/card/card.component';
 import { ShowComponent } from './pages/show/show.component';
-import { MenuComponent } from './users/@shared/admin/menu/menu.component'
 
 @NgModule({
   declarations: [
@@ -28,13 +25,10 @@ import { MenuComponent } from './users/@shared/admin/menu/menu.component'
     NavComponent,
     RegisterComponent,
     AboutComponent,
-    AdminComponent,
-    OtherComponent,
     FooterComponent,
     NotFoundComponent,
     CardComponent,
     ShowComponent,
-    MenuComponent
   ],
   imports: [
     BrowserModule,
