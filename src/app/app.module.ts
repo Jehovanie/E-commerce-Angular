@@ -18,7 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { CardComponent } from './components/card/card.component';
 import { ShowComponent } from './pages/show/show.component';
-import { MenuComponent } from './users/_elements/admin/menu/menu.component'
+import { MenuComponent } from './users/@shared/admin/menu/menu.component'
 
 @NgModule({
   declarations: [
