@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card',
@@ -11,7 +12,7 @@ export class CardComponent implements OnInit {
 
   tab_etoil!: Number[];
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
 
@@ -19,6 +20,7 @@ export class CardComponent implements OnInit {
 
   handleClick() {
     console.log("clicked ... ")
+    this.route.navigate(['/show']);
   }
 
 }

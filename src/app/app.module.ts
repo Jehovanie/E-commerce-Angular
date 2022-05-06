@@ -16,7 +16,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
-import { CardComponent } from './components/card/card.component'
+import { CardComponent } from './components/card/card.component';
+import { ShowComponent } from './pages/show/show.component'
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CardComponent } from './components/card/card.component'
     OtherComponent,
     FooterComponent,
     NotFoundComponent,
-    CardComponent
+    CardComponent,
+    ShowComponent
   ],
   imports: [
     BrowserModule,
