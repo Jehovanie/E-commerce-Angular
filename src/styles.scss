@@ -37,7 +37,8 @@ $eCommerceAngular-theme: mat.define-light-theme((color: (primary: $eCommerceAngu
 
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
+  padding-left: 10px
 }
 
 html,
@@ -46,8 +47,26 @@ body {
 }
 
 body {
+  width: 100vw !important;
+  overflow-x: hidden;
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+ul {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  gap: 3px;
+  padding: 5px 10px;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
 }
 
 @import "~bootstrap-icons/font/bootstrap-icons.css";

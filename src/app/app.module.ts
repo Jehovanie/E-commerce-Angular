@@ -17,7 +17,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { CardComponent } from './components/card/card.component';
-import { ShowComponent } from './pages/show/show.component'
+import { ShowComponent } from './pages/show/show.component';
+import { MenuComponent } from './users/_elements/admin/menu/menu.component'
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ShowComponent } from './pages/show/show.component'
     FooterComponent,
     NotFoundComponent,
     CardComponent,
-    ShowComponent
+    ShowComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,7 @@ import { ShowComponent } from './pages/show/show.component'
     ReactiveFormsModule,
     RouterModule,
     BrowserAnimationsModule,
-    MatSliderModule
+    MatSliderModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
