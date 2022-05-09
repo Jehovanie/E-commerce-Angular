@@ -72,6 +72,14 @@ export const data =
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus animi dolorem fugit vitae laudantium in!"
         },
 
+    ],
+    users: [
+        {
+            id: 1,
+            email: "jhonedoe@gmail.com",
+            firstname: "George",
+            avatar: "assets/images/informatique/model-4.jpg",
+        }
     ]
 }
 

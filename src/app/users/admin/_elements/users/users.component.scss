@@ -1,0 +1,40 @@
+thead tr th,
+td {
+    position: relative;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+}
+
+.ligne {
+
+    .content__name {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.avatar {
+
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+
+    img {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+}
+
+.content__table {
+    display: block;
+    max-height: 250px;
+    overflow: scroll;
+}
