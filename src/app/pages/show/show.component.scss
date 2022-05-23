@@ -6,3 +6,67 @@
         height: 68%;
     }
 }
+
+.show__container {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.entete__show {
+    position: relative;
+}
+
+.image__container {
+    img {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+.title__images {
+    position: absolute;
+    bottom: 8%;
+    left: 5%;
+
+    color: white;
+    font-size: 2rem;
+}
+
+.container__title__description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__description {
+    height: 50vh;
+    background-color: #153552;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.litle__title {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    text-align: right;
+
+}
+
+.description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.card__element {
+    display: block;
+    background-color: #15355229;
+    padding: 5px 5px;
+    border-radius: 10px;
+}
