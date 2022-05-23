@@ -38,3 +38,21 @@ td {
     max-height: 250px;
     overflow: scroll;
 }
+
+.content__status {
+
+    display: block;
+    height: 60px;
+
+    position: relative;
+}
+
+.user__member {
+    position: absolute;
+    bottom: 15px;
+    right: 2px;
+
+    font-weight: bolder;
+
+    text-align: end;
+}

@@ -1,7 +1,7 @@
 <div class="container-fluid left__side">
     <div class="head__menu">
         <div class="content__logo">
-           <h2> H'Clo</h2>
+            <h2> H'Clo</h2>
         </div>
         <div>
             <img src="../../../../../assets/images/icons/menu.png" alt="icon-menu" class="icon">
@@ -13,32 +13,45 @@
         <ul>
             <li>
                 <img src="../../../../../assets/images/icons/dashboard.png" alt="icon-dashboard" class="icon">
-                <a href="#"><h3> Dashboard</h3></a>
+                <a [routerLink]="['/']" routerLinkActive="router-link-active">
+                    <h3> Dashboard</h3>
+                </a>
             </li>
             <li>
                 <img src="../../../../../assets/images/icons/order.png" alt="icon-order" class="icon">
-                <a href="#"><h3> My Orders</h3></a>
+                <a href="#">
+                    <h3> My Orders</h3>
+                </a>
             </li>
             <li>
                 <img src="../../../../../assets/images/icons/product.png" alt="icon-product" class="icon">
-                <a href="#"><h3> My Products</h3></a>
+                <a href="#">
+                    <h3> My Products</h3>
+                </a>
             </li>
 
             <li>
                 <img src="../../../../../assets/images/icons/user.png" alt="icon-user" class="icon">
-                <a href="#"><h3>Users</h3></a>
+                <a href="#">
+                    <h3>Users</h3>
+                </a>
             </li>
             <li>
                 <img src="../../../../../assets/images/icons/advertisment.png" alt="icon-advertisement" class="icon">
-                <a href="#"><h3>Advertisement</h3></a>
+                <a href="#">
+                    <h3>Advertisement</h3>
+                </a>
             </li>
             <li>
                 <img src="../../../../../assets/images/icons/discount.png" alt="icon-discount" class="icon">
-                <a href="#"><h3>Discount & Coupons</h3></a>
+                <a href="#">
+                    <h3>Discount & Coupons</h3>
+                </a>
             </li>
             <li>
                 <img src="../../../../../assets/images/icons/logout.png" alt="icon-logout" class="icon">
-                    <a *ngIf="authService.isLoggedIn()" [ngStyle]="{ 'color':'red','cursor':'pointer'}"  (click)="logout()">Se Déconnecter</a>
+                <a *ngIf="authService.isLoggedIn()" [ngStyle]="{ 'color':'red','cursor':'pointer'}"
+                    (click)="logout()">Se Déconnecter</a>
             </li>
         </ul>
     </div>

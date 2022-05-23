@@ -17,11 +17,13 @@
                     <a class="nav-link link" routerLink="/about">About</a>
                 </li>
                 <li class="nav-item p-2">
-                    <a *ngIf="!authService.isLoggedIn()" class="btn btn-info rounded-2" routerLink="/login">Se
-                        Connecter</a>
+                    <a *ngIf="!authService.isLoggedIn()" class="rounded-2" routerLink="/login">
+                        <img src="../../../assets/images/other/login.jpg" alt="login" width="30" height="30">
+                    </a>
 
-                    <a *ngIf="authService.isLoggedIn()" class="btn btn-info rounded-2" (click)="logout()">Se
-                        Déconnecter</a>
+                    <a *ngIf="authService.isLoggedIn()" class="rounded-2" (click)="logout()">
+                        <img src="../../../assets/images/other/logout.png" alt="login" width="30" height="30">
+                    </a>
                 </li>
             </ul>
         </div>
