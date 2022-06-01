@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { CardComponent } from './components/card/card.component';
 import { ShowComponent } from './pages/show/show.component';
+import { StartRatingComponent } from './components/@shared/start-rating/start-rating.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ShowComponent } from './pages/show/show.component';
     NotFoundComponent,
     CardComponent,
     ShowComponent,
+    StartRatingComponent
   ],
   imports: [
     BrowserModule,

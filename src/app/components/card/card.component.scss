@@ -1,7 +1,7 @@
 .element-card {
     transition: .6s;
     position: relative;
-    height: 350px;
+    height: 400px;
 
     img {
         width: 100%;
@@ -9,6 +9,7 @@
     }
 
     .card-body {
+        height: 50%;
 
         .card-content {
 

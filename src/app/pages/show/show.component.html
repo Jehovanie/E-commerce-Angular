@@ -2,7 +2,9 @@
     <app-nav></app-nav>
     <div class="container content-show">
         <div class="row">
+
             <div class="show__container col-lg-8 col-md-10 col-sm-8 col-xs-10">
+
                 <div class="entete__show">
                     <div class="image__container">
                         <img class="img-fluid" src="../../../assets/images/car/model-1.jpg" alt="Image">
@@ -113,6 +115,15 @@
                     </div>
                 </div>
 
+                <div class="row m-auto">
+                    <button class="btn-back-next col-2 d-flex justify-content-center">
+                        <a [routerLink]="['/']"> back...</a>
+                    </button>
+                    <div class="col-8 m-0 p-0"></div>
+                    <button class="btn-back-next col-2 d-flex justify-content-center">
+                        next...
+                    </button>
+                </div>
             </div>
         </div>
     </div>
