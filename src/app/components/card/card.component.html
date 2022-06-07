@@ -6,14 +6,18 @@
             <div class="card-content">
                 <h1>{{element.name}} </h1>
                 <p class="card-text">{{element.description}}</p>
+                <p class="text-secondary">
+                    Price : {{element.price | currency : "EUR" : 'symbol': '1.2-2'}}
+                </p>
                 <div class="card-after">
                     <app-start-rating (handleClickFromStartRating)="handleClickedFromAppStart($event)">
-
                     </app-start-rating>
                     <p class="mt-2">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, fugiat?
                     </p>
-                    <button class="btn btn-primary" (click)="handleClick()"> Read more ...</button>
+                    <a class="btn btn-primary" [routerLink]="['/show' , element.type, element.id]">
+                        Read more ...
+                    </a>
                 </div>
             </div>
         </div>

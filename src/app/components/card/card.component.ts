@@ -18,8 +18,8 @@ export class CardComponent implements OnInit {
 
   }
 
-  handleClick() {
-    this.route.navigate(['/show']);
+  handleClick(id: number) {
+    this.route.navigate(['/show', { type: this.element.type, id: id }]);
   }
 
   handleClickedFromAppStart(message: string) {

@@ -12,7 +12,7 @@ import { ShowComponent } from './pages/show/show.component';
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "login", component: LoginComponent },
-  { path: "show", component: ShowComponent },
+  { path: "show/:type/:id", component: ShowComponent },
   { path: "home", component: HomeComponent },
   { path: "about", component: AboutComponent },
   { path: "admin", loadChildren: () => import("./users/admin/admin.module").then(m => m.AdminModule) },
