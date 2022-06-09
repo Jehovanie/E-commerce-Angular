@@ -1,4 +1,7 @@
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable, throwError } from 'rxjs';
+import { tap, catchError } from 'rxjs/operators';
 import data from "../../data";
 import { IData } from '../interface/Idata';
 
@@ -9,10 +12,25 @@ export class DataService {
 
     public users: any;
 
+    ///c'est l'api qui stock les datas ( le plus souvent url point sur le back )
+    private readonly API_DATA = "api/data.json";
 
-    constructor() {
-        this.getUsers().then(json => console.log(json));
-        console.log("Users : " + this.users)
+    ///injection de HttpClient.
+    constructor(private httpClient: HttpClient) { }
+
+    ///gere les errors via observable.
+    private handleError(error: HttpErrorResponse) {
+        if (error.status === 0) {
+            // A client-side or network error occurred. Handle it accordingly.
+            console.error('An error occurred:', error.error);
+        } else {
+            // The backend returned an unsuccessful response code.
+            // The response body may contain clues as to what went wrong.
+            console.error(
+                `Backend returned code ${error.status}, body was: `, error.error);
+        }
+        // Return an observable with a user-facing error message.
+        return throwError(() => new Error('Something bad happened; please try again later.'));
     }
 
 
@@ -23,6 +41,15 @@ export class DataService {
 
         return fakedata;
     }
+
+    //// get all data from the back.
+    getAllData(): Observable<any> {
+        return this.httpClient.get<any>(this.API_DATA).pipe(
+            tap(data => console.log(data)),
+            catchError(this.handleError)
+        )
+    }
+
 
     getDataByType(type: string) {
         switch (type) {
@@ -37,21 +64,8 @@ export class DataService {
         }
     }
 
-    getAllData() {
-        return data;
-    }
-
-    getDataCar(): IData[] {
-        return data.car;
-    }
-    getDataInfo(): IData[] {
-        return data.informatique;
-    }
-    getDataScouter(): IData[] {
-        return data.scouter;
-    }
-
     getByTypeAndId(type: string, id: number): IData {
         return this.getDataByType(type)[id - 1];
     }
+
 }

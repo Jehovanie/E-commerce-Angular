@@ -16,15 +16,23 @@ export class HomeComponent implements OnInit {
   private _dataFilter: string = "none";
 
 
+  ///injection de service
   constructor(private db: DataService) { }
 
   ngOnInit(): void {
 
-    this._scooters = this.db.getDataScouter();
-    this._informatiques = this.db.getDataInfo();
-    this._cars = this.db.getDataCar();
+    ///subscribe to the service.
+    this.db.getAllData().subscribe({
+      next: data => {
+        this._cars = data.car;
+        this._informatiques = data.informatique;
+        this._scooters = data.scouter;
+      },
+      complete: () => console.log("Fini...")
+    })
   }
 
+  /* =============== JUST FUNCTION GET ============== */
   get getDataFilter(): string {
     return this._dataFilter;
   }
@@ -44,4 +52,6 @@ export class HomeComponent implements OnInit {
   get getScouters(): IData[] {
     return this._scooters;
   }
+  /* =============== FIN FUNCTION GET ============== */
+
 }
