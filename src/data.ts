@@ -48,6 +48,7 @@ export const data =
             name: "Lorem 1",
             image: "assets/images/informatique/model-1.jpg",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus animi dolorem fugit vitae laudantium in!",
+            like: 3.5,
             price: 254.5,
             type: "informatique"
         },
@@ -56,6 +57,7 @@ export const data =
             name: "Lorem 2",
             image: "assets/images/informatique/model-2.jpg",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus animi dolorem fugit vitae laudantium in!",
+            like: 3.5,
             price: 254.5,
             type: "informatique"
         },
@@ -64,6 +66,7 @@ export const data =
             name: "Lorem 3",
             image: "assets/images/informatique/model-3.jpg",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus animi dolorem fugit vitae laudantium in!",
+            like: 3.5,
             price: 254.5,
             type: "informatique"
         },
@@ -72,6 +75,7 @@ export const data =
             name: "Lorem 4",
             image: "assets/images/informatique/model-4.jpg",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus animi dolorem fugit vitae laudantium in!",
+            like: 4.5,
             price: 154.45,
             type: "informatique"
         },
@@ -84,6 +88,7 @@ export const data =
             image: "assets/images/scouter/model-1.jpg",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus animi dolorem fugit vitae laudantium in!",
             price: 350.5,
+            like: 3,
             type: "scouter"
         },
         {
@@ -92,6 +97,7 @@ export const data =
             image: "assets/images/scouter/model-2.jpg",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus animi dolorem fugit vitae laudantium in!",
             price: 350.5,
+            like: 3,
             type: "scouter"
         },
         {
@@ -100,6 +106,7 @@ export const data =
             image: "assets/images/scouter/model-3.jpg",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus animi dolorem fugit vitae laudantium in!",
             price: 350.5,
+            like: 3,
             type: "scouter"
         },
         {
@@ -108,6 +115,7 @@ export const data =
             image: "assets/images/scouter/model-5.jpg",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus animi dolorem fugit vitae laudantium in!",
             price: 350.5,
+            like: 3,
             type: "scouter"
         },
 

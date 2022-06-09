@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+import { IData } from 'src/app/interface/Idata';
 
 @Component({
   selector: 'app-card',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class CardComponent implements OnInit {
 
-  @Input() element !: any;
+  @Input() element!: IData;
 
   tab_etoil!: Number[];
 

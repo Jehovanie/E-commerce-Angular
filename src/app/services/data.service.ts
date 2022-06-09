@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import data from "../../data";
+import { IData } from '../interface/Idata';
 
 @Injectable({
     providedIn: 'root'
@@ -40,18 +41,17 @@ export class DataService {
         return data;
     }
 
-    getDataCar() {
+    getDataCar(): IData[] {
         return data.car;
     }
-    getDataInfo() {
+    getDataInfo(): IData[] {
         return data.informatique;
     }
-    getDataScouter() {
+    getDataScouter(): IData[] {
         return data.scouter;
     }
 
-    getByTypeAndId(type: string, id: number) {
-
+    getByTypeAndId(type: string, id: number): IData {
         return this.getDataByType(type)[id - 1];
     }
 }

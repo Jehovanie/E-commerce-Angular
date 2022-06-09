@@ -1,22 +1,33 @@
 <app-nav></app-nav>
 <div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <span class="filter">
+                Filter Actuel :
+            </span>
+            <b> {{getDataFilter}} </b>
+        </div>
+        <div class="col-md-8 form-group">
+            <input type="text" class="form-control" [(ngModel)]="setDataFilter">
+        </div>
+    </div>
     <div class="content">
         <div class="content-title">
             <h1> Car Accessory</h1>
             <hr />
             <div class="row">
-                <app-card *ngFor="let car of cars" [element]="car" class="col-md-3 col-sm-6">
+                <app-card *ngFor="let car of getCars" [element]="car" class="col-md-3 col-sm-6">
                 </app-card>
             </div>
         </div>
     </div>
-
+    <!--
     <div class="content">
         <div class="content-title">
             <h1> Scooter Accessory</h1>
             <hr />
             <div class="row">
-                <app-card *ngFor="let scooter of scooters" [element]="scooter" class="col-md-3 col-sm-6">
+                <app-card *ngFor="let scooter of getScouters" [element]="scooter" class="col-md-3 col-sm-6">
                 </app-card>
             </div>
         </div>
@@ -26,11 +37,11 @@
             <h1> Informatique Accessory</h1>
             <hr />
             <div class="row">
-                <app-card *ngFor="let informatique of informatiques" [element]="informatique" class="col-md-3 col-sm-6">
+                <app-card *ngFor="let informatique of getInfo" [element]="informatique" class="col-md-3 col-sm-6">
                 </app-card>
             </div>
         </div>
     </div>
-
+-->
 </div>
 <app-footer></app-footer>
