@@ -25,16 +25,19 @@
             </li>
             <li>
                 <img src="assets/images/icons/product.png" alt="icon-product" class="icon">
-                <a href="#">
-                    <h3> My Products</h3>
+                <a [routerLink]="['/admin/product']">
+
+                    <h3>
+                        My Products
+                    </h3>
                 </a>
             </li>
 
             <li>
                 <img src="assets/images/icons/user.png" alt="icon-user" class="icon">
-                <a href="#">
+                <a [routerLink]="['/admin/users']">
                     <h3>
-                        <a [routerLink]="['/admin/users']"> Users</a>
+                        Users
                     </h3>
                 </a>
             </li>

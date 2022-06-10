@@ -1,0 +1,60 @@
+<div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6">
+        <app-menu></app-menu>
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-6 mx-auto mt-3">
+        <div class="row">
+            <div class="container-fuild content__table">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Likes</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="ligne" *ngFor="let car of getCars">
+                            <td>
+                                {{car.id}}
+                            </td>
+                            <td>
+                                <img src={{car.image}} alt="image-car">
+                            </td>
+                            <td>
+                                {{car.name}}
+                            </td>
+                            <td>
+                                {{car.description | subText }}
+                            </td>
+                            <td>
+                                {{car.like}}
+                            </td>
+                            <td>
+                                {{car.price| currency : "EUR" : 'symbol': '1.2-2'}}
+                            </td>
+                            <td>
+                                <button class="btn btn-info mx-2">Modifier </button>
+                                <button class="btn btn-danger">Supprimer</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="content__status d-flex justify-content-end ">
+                <div class="row">
+                    <div class="user__member">
+                        Aux total , il y a {{getCars.length}} cars.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
