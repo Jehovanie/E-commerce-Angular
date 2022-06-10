@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
+  public inputData: string = "";
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  set setInputData(value: string) {
+    this.inputData = value;
   }
 
 }
