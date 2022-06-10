@@ -25,6 +25,11 @@ export class ShowComponent implements OnInit {
             this._urlParamId = param.id;
         })
 
+        console.log(this._urlParamId)
+        console.log(this._urlParamType)
+
+        this.dataService.getAllData().subscribe((elements) => elements)
+
         this.element = this.dataService.getByTypeAndId(this._urlParamType, Number(this._urlParamId));
         console.log(this.element);
 
