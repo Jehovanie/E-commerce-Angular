@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { AdminComponent } from "./admin.component";
-import { MenuComponent } from "../@shared/admin/menu/menu.component";
+import { MenuComponent } from "./_elements/menu/menu.component";
 import { AdminRoutingModule } from "./admin-routing.module";
 import { UsersComponent } from './_elements/users/users.component';
 import { FormsModule } from "@angular/forms";

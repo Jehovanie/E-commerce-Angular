@@ -14,7 +14,7 @@
             <li>
                 <img src="assets/images/icons/dashboard.png" alt="icon-dashboard" class="icon">
                 <a [routerLink]="['/']" routerLinkActive="router-link-active">
-                    <h3> Dashboard</h3>
+                    <h3> Acceuil</h3>
                 </a>
             </li>
             <li>
@@ -33,7 +33,9 @@
             <li>
                 <img src="assets/images/icons/user.png" alt="icon-user" class="icon">
                 <a href="#">
-                    <h3>Users</h3>
+                    <h3>
+                        <a [routerLink]="['/admin/users']"> Users</a>
+                    </h3>
                 </a>
             </li>
             <li>

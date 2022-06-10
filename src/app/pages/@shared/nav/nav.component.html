@@ -1,7 +1,9 @@
 <nav class="cc-navbar navbar navbar-expand-lg navbar-light bg-light w-100">
     <div class="container-fluid">
-        <img class="logo" src="../../../assets/images/other/logo.png" alt="logo">
-        <a class="navbar-brand text-uppercase mx-2  py-2 fw-bolder" routerLink="/home">I'Clo</a>
+        <a class="navbar-brand text-uppercase mx-2  py-2 fw-bolder" routerLink="/home">
+            <img class="logo" src="../../../assets/images/other/logo.png" alt="logo">
+            I'Clo
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -9,7 +11,8 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item pe-3">
-                    <a class="nav-link link" aria-current="page" routerLink="/home" routerLinkActive="active">Home</a>
+                    <a class="nav-link link" aria-current="page" routerLink="/home"
+                        routerLinkActive="active">Articles</a>
                 </li>
                 <li class="nav-item pe-3">
                     <a class="nav-link link" (click)="goToDashBoard()" routerLinkActive="active">Dashboard</a>

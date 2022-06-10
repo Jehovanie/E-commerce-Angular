@@ -112,5 +112,50 @@
             "like": 3,
             "type": "scouter"
         }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "username": "duncan",
+            "country": "australia",
+            "email": "duncan@gmail.com",
+            "password": "123",
+            "favorite": [
+                "car",
+                "scouter"
+            ]
+        },
+        {
+            "id": 2,
+            "username": "sarah",
+            "country": "england",
+            "email": "sarah@gmail.com",
+            "password": "123",
+            "favorite": [
+                "technologie"
+            ]
+        },
+        {
+            "id": 3,
+            "username": "admin",
+            "country": "usa",
+            "email": "admin@gmail.com",
+            "password": "123",
+            "favorite": [
+                "car",
+                "technologie"
+            ]
+        },
+        {
+            "id": 4,
+            "username": "test2",
+            "country": "madagascar",
+            "email": "text2@gmail.com",
+            "password": "123",
+            "favorite": [
+                "technologie",
+                "scouter"
+            ]
+        }
     ]
 }
