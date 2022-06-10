@@ -18,6 +18,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { CardComponent } from './components/card/card.component';
 import { ShowComponent } from './pages/show/show.component';
 import { StartRatingComponent } from './components/@shared/start-rating/start-rating.component';
+import { AdminModule } from './users/admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -36,12 +37,12 @@ import { StartRatingComponent } from './components/@shared/start-rating/start-ra
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     ReactiveFormsModule,
     RouterModule,
     BrowserAnimationsModule,
     MatSliderModule,
     HttpClientModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]
