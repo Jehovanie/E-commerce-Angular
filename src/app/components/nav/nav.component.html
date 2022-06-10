@@ -9,13 +9,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item pe-3">
-                    <a class="nav-link link active" aria-current="page" routerLink="/home">Home</a>
+                    <a class="nav-link link" aria-current="page" routerLink="/home" routerLinkActive="active">Home</a>
                 </li>
                 <li class="nav-item pe-3">
-                    <a class="nav-link link" (click)="goToDashBoard()">Dashboard</a>
+                    <a class="nav-link link" (click)="goToDashBoard()" routerLinkActive="active">Dashboard</a>
                 </li>
                 <li class="nav-item pe-3">
-                    <a class="nav-link link" routerLink="/about">About</a>
+                    <a class="nav-link link" routerLink="/about" routerLinkActive="active">About</a>
                 </li>
                 <li class="nav-item p-2">
                     <a *ngIf="!authService.isLoggedIn()" class="rounded-2" routerLink="/login">
