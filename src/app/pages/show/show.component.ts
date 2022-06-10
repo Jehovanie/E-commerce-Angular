@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { IData } from 'src/app/interface/Idata';
 import { DataService } from 'src/app/services/data__service/data.service';
 
 
@@ -11,33 +12,46 @@ import { DataService } from 'src/app/services/data__service/data.service';
 export class ShowComponent implements OnInit {
 
     private _urlParamType!: string;
-    private _urlParamId!: string;
+    private _urlParamId!: number;
 
-    public element: any;
+    public element!: IData;
     public elementNext!: string;
     public elementPrev!: string;
 
     constructor(private route: ActivatedRoute, private rooter: Router, private dataService: DataService) { }
 
     ngOnInit(): void {
+
+        ///prendre les valeurs de paramtètre dans l'url
         this.route.params.forEach(param => {
             this._urlParamType = param.type;
-            this._urlParamId = param.id;
+            this._urlParamId = +param.id;
         })
 
-        console.log(this._urlParamId)
-        console.log(this._urlParamType)
+        switch (this._urlParamType) {
+            case "car":
+                this.dataService.getAllData().subscribe({
+                    next: data => this.element = data.car.find((item: IData) => item.id == this._urlParamId),
+                    complete: () => console.log("get car finised...")
+                });
 
-        this.dataService.getAllData().subscribe((elements) => elements)
+                break;
+            case "informatique":
+                this.dataService.getAllData().subscribe(
+                    {
+                        next: data => this.element = data.informatique.find((item: IData) => item.id == this._urlParamId),
+                        complete: () => console.log("get info finised...")
+                    })
+                break;
+            case "scouter":
+                this.dataService.getAllData().subscribe({
+                    next: data => this.element = data.scouter.find((item: IData) => item.id == this._urlParamId),
+                    complete: () => console.log("get scouter finised...")
+                })
+                break;
+            default:
+                break;
+        }
 
-        this.element = this.dataService.getByTypeAndId(this._urlParamType, Number(this._urlParamId));
-        console.log(this.element);
-
-        const prev = Number(this._urlParamId) - 1
-        const next = Number(this._urlParamId) + 1
-
-        this.elementPrev = prev.toString()
-        this.elementNext = next.toString()
     }
-
 }

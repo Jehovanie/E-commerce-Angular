@@ -48,41 +48,4 @@ export class DataService {
         )
     }
 
-
-    getDataByType(type: string): IData[] {
-        console.log("getDataByType...")
-        var element!: IData[];
-        switch (type) {
-            case "car":
-                this.getAllData().subscribe({
-                    next: data => element = data.car,
-                    complete: () => console.log("get car finised...")
-                });
-                console.log(element)
-                return element
-            case "informatique":
-                this.getAllData().subscribe(
-                    {
-                        next: data => element = data.informatique,
-                        complete: () => console.log("get info finised...")
-                    })
-                return element;
-            case "scouter":
-                this.getAllData().subscribe({
-                    next: data => element = data.scouter,
-                    complete: () => console.log("get scouter finised...")
-                })
-                return element;
-            default:
-                return []
-        }
-    }
-
-    getByTypeAndId(type: string, id: number) {
-        console.log("getDataByTypeAndId...")
-        console.log(this.getDataByType(type)[id - 1])
-        return this.getDataByType(type)[id - 1];
-
-    }
-
 }

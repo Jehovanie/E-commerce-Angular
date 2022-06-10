@@ -21,7 +21,7 @@ export class GuardShowGuard implements CanActivate {
     const type: string = route.params.type;
     const id: number = +route.params.id;
 
-    if (allType.indexOf(type) === -1 || id <= 0) {
+    if (allType.indexOf(type) === -1 || isNaN(id) || id <= 0) {
 
       alert("Element not found ....")
       this.router.navigate(["/home"])
