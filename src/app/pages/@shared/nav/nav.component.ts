@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ServiceAuthService } from 'src/app/services/service-auth.service';
+import { ServiceAuthService } from 'src/app/services/auth__service/service-auth.service';
 
 @Component({
     selector: 'app-nav',
