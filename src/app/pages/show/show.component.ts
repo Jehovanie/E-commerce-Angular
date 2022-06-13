@@ -15,8 +15,6 @@ export class ShowComponent implements OnInit {
     private _urlParamId!: number;
 
     public element!: IData;
-    public elementNext!: string;
-    public elementPrev!: string;
 
     constructor(private route: ActivatedRoute, private rooter: Router, private dataService: DataService) { }
 
