@@ -4,7 +4,7 @@ import { AdminComponent } from "./admin.component";
 import { MenuComponent } from "./_elements/menu/menu.component";
 import { AdminRoutingModule } from "./admin-routing.module";
 import { UsersComponent } from './_elements/users/users.component';
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ProductsComponent } from './_elements/products/products.component';
 import { SubStractText } from "../../@shared/pipe/ststrac.pipe";
 
@@ -19,7 +19,8 @@ import { SubStractText } from "../../@shared/pipe/ststrac.pipe";
     imports: [
         CommonModule,
         AdminRoutingModule,
-        FormsModule
+        FormsModule,
+        ReactiveFormsModule
     ],
     exports: [
         FormsModule

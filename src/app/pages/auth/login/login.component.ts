@@ -16,10 +16,6 @@ export class LoginComponent implements OnInit {
     @ViewChild('closedModal') closeModal!: ElementRef
 
     constructor(private router: Router, private authService: ServiceAuthService) {
-        console.log("--------------------");
-        console.log(this.authService.admin);
-        console.log("--------------------");
-
     }
 
     ngOnInit(): void {

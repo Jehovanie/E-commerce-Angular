@@ -3,7 +3,20 @@
         <app-menu></app-menu>
     </div>
     <div class="col-lg-8 col-md-8 col-sm-6 mx-auto mt-3">
-        <div class="row">
+
+        <div class="row mt-5 h-20">
+            <form class="container-fuild content__category" [formGroup]="formGroup">
+                <label class="col-3 fw-bolder fs-5" for="outil"> Select Category : </label>
+                <select class="input__select col-9 h-100 p-3" name="outil" id="outile" formControlName="selectOption"
+                    (change)="onChange(formGroup)" value="cars">
+                    <option value="info"> Informatique</option>
+                    <option value="scouter">Scouter</option>
+                    <option value="car"> Cars</option>
+                </select>
+            </form>
+        </div>
+
+        <div class="row mt-3">
             <div class="container-fuild content__table">
                 <table class="table">
                     <thead>
@@ -12,31 +25,31 @@
                             <th scope="col">Image</th>
                             <th scope="col">Name</th>
                             <th scope="col">Description</th>
-                            <th scope="col">Likes</th>
+                            <th scope="col">Stars</th>
                             <th scope="col">Price</th>
                             <th scope="col">Action</th>
 
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="ligne" *ngFor="let car of getCars">
+                        <tr class="ligne" *ngFor="let element of elements">
                             <td>
-                                {{car.id}}
+                                {{element.id}}
                             </td>
                             <td>
-                                <img src={{car.image}} alt="image-car">
+                                <img src={{element.image}} alt="image-car">
                             </td>
                             <td>
-                                {{car.name}}
+                                {{element.name}}
                             </td>
                             <td>
-                                {{car.description | subText }}
+                                {{element.description | subText }}
                             </td>
                             <td>
-                                {{car.like}}
+                                {{element.like}}
                             </td>
                             <td>
-                                {{car.price| currency : "EUR" : 'symbol': '1.2-2'}}
+                                {{element.price| currency : "EUR" : 'symbol': '1.2-2'}}
                             </td>
                             <td>
                                 <button class="btn btn-info mx-2">Modifier </button>
@@ -49,7 +62,7 @@
             <div class="content__status d-flex justify-content-end ">
                 <div class="row">
                     <div class="user__member">
-                        Aux total , il y a {{getCars.length}} cars.
+                        Aux total , il y a {{elements.length}} cars.
                     </div>
                 </div>
             </div>
