@@ -71,7 +71,7 @@
                                 (click)="setIsShowHome()">
                                 HOME
                                 <span class="material-icons-outlined">
-                                    expand_more
+                                    {{ isShowHome? 'expand_more' : 'chevron_right'}}
                                 </span>
                             </div>
                             <div class="app__element" *ngIf="isShowHome">
@@ -94,7 +94,7 @@
                                 (click)="setIsShowShop()">
                                 SHOP
                                 <span class="material-icons-outlined">
-                                    expand_more
+                                    {{ isShowShop? 'expand_more' : 'chevron_right'}}
                                 </span>
                             </div>
 
@@ -118,7 +118,7 @@
                                 (click)="setIsShowTrend()">
                                 TREND
                                 <span class="material-icons-outlined">
-                                    expand_more
+                                    {{ isShowTrend? 'expand_more' : 'chevron_right'}}
                                 </span>
                             </div>
 
@@ -143,7 +143,7 @@
 
                                 BLOG
                                 <span class="material-icons-outlined">
-                                    expand_more
+                                    {{ isShowBlog? 'expand_more' : 'chevron_right'}}
                                 </span>
                             </div>
 
@@ -180,8 +180,6 @@
         </div>
     </div>
 </div>
-
-
 <!-- <nav class="cc-navbar navbar navbar-expand-lg navbar-light bg-light w-100">
     <div class="container">
         <a class="navbar-brand text-uppercase   py-2 fw-bolder" routerLink="/home">
