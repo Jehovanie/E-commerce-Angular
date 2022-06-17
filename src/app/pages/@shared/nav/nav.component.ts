@@ -9,9 +9,33 @@ import { ServiceAuthService } from 'src/app/services/auth__service/service-auth.
 })
 export class NavComponent implements OnInit {
 
+    public isShowCat: boolean = false;
+    public isShowHome: boolean = false;
+    public isShowShop: boolean = false;
+    public isShowTrend: boolean = false;
+    public isShowBlog: boolean = false;
+
+
     constructor(public authService: ServiceAuthService, private router: Router) { }
 
     ngOnInit(): void {
+    }
+
+
+    public setIsShowCat(): void {
+        this.isShowCat = !this.isShowCat;
+    }
+    public setIsShowHome(): void {
+        this.isShowHome = !this.isShowHome;
+    }
+    public setIsShowShop(): void {
+        this.isShowShop = !this.isShowShop;
+    }
+    public setIsShowTrend(): void {
+        this.isShowTrend = !this.isShowTrend;
+    }
+    public setIsShowBlog(): void {
+        this.isShowBlog = !this.isShowBlog;
     }
 
     goToDashBoard() {
@@ -34,4 +58,6 @@ export class NavComponent implements OnInit {
                 }
             })
     }
+
+
 }

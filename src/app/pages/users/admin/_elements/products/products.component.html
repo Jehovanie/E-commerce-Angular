@@ -52,7 +52,7 @@
                                 {{element.price| currency : "EUR" : 'symbol': '1.2-2'}}
                             </td>
                             <td>
-                                <button class="btn btn-info mx-2">Modifier </button>
+                                <a class="btn btn-info mx-2" [routerLink]="['edit' , element.id]">Modifier </a>
                                 <button class="btn btn-danger">Supprimer</button>
                             </td>
                         </tr>

@@ -22,6 +22,11 @@
 	cursor: pointer;
 }
 
+.content__navbar {
+	border: 1px solid rgba(0, 0, 0, 0.246);
+
+}
+
 .link {
 	display: block;
 	transition: .5s !important;
@@ -72,8 +77,62 @@
 }
 
 .logo {
-	width: 50px;
+	width: 250px;
+	height: 100px;
+}
+
+.content__nav__search {
+	margin: 0 auto;
+
+	.nav__search {
+		display: block;
+		width: 80%;
+		margin: 0 auto;
+		border: 0.5px solid rgba(0, 0, 0, 0.246);
+		border-radius: 25px;
+		padding: 15px 25px;
+
+		&:focus {
+			border: none;
+		}
+
+	}
+}
+
+.content__card {
+	height: 100px;
+	border: 1px solid rgba(0, 0, 0, 0.246);
+	border-top: 0;
+	border-bottom: 0;
+}
+
+.content__category {
 	height: 50px;
+}
 
+.add__click {
+	cursor: pointer;
+	user-select: none;
+}
 
+.cat__element {
+	position: absolute;
+	top: 35px;
+	left: 0;
+
+	width: 300px;
+	background-color: #afb7bf44;
+	padding: 1rem 1.5rem;
+	font-weight: 100;
+}
+
+.app__element {
+	position: absolute;
+	top: 35px;
+	left: 0;
+
+	width: 100px;
+	background-color: #afb7bf44;
+	padding: 1rem 1.5rem;
+	font-weight: 100;
 }

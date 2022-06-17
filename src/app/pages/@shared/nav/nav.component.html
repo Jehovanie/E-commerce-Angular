@@ -1,4 +1,188 @@
-<nav class="cc-navbar navbar navbar-expand-lg navbar-light bg-light w-100">
+<div>
+    <nav class="content__navbar navbar-expand-lg navbar-light w-100">
+        <div class="container">
+            <div class="col-md-12 col-sm-10 col-xs-10 mx-auto">
+                <div class="row">
+                    <div class="d-flex justify-content-evenly align-items-center">
+                        <div class="col-3">
+                            <a class="navbar-brand py-2 " routerLink="/home">
+                                <img class="logo" src="../../../assets/images/icons/logo-1.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="col-6 content__nav__search">
+                            <input class="nav__search" type="text" placeholder="Search our store">
+                        </div>
+                        <div class="col-3">
+                            <div class="content__card d-flex justify-content-evenly align-items-center">
+                                <span class="material-icons-outlined">
+                                    group
+                                </span>
+                                <span class="material-icons-outlined">
+                                    favorite_border
+                                </span>
+                                <span class="material-icons-outlined">
+                                    storefront
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container content__category">
+        <div class="row px-4 py-3">
+            <div class="d-flex justify-content-evenly align-items-center">
+                <div class="col-3 position-relative">
+                    <div class="add__click d-flex justify-content-left align-items-center fw-bold"
+                        (click)="setIsShowCat()">
+                        <span class="material-icons-outlined">
+                            menu_open
+                        </span>
+                        CATEGORIES
+                    </div>
+
+                    <div class="cat__element" *ngIf="isShowCat">
+                        <div class="d-flex justify-content-between align-items-center">
+                            lorem upsum lorem
+                            <span class="material-icons-outlined">
+                                chevron_right
+                            </span>
+                        </div>
+                        <div class="my-2 d-flex justify-content-between align-items-center">lorem upsum lorem </div>
+                        <div class="my-2 d-flex justify-content-between align-items-center">
+                            lorem upsum lorem
+                            <span class="material-icons-outlined">
+                                chevron_right
+                            </span>
+                        </div>
+                        <div class="my-2 d-flex justify-content-between align-items-center">
+                            lorem upsum lorem
+                        </div>
+                        <div class=" d-flex justify-content-between align-items-cente">
+                            lorem upsum lorem
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 fw-bold">
+                    <div class="d-flex justify-content-evenly align-items-center">
+                        <div class="home_cat position-relative">
+                            <div class="d-flex add__click justify-content-evenly align-items-center"
+                                (click)="setIsShowHome()">
+                                HOME
+                                <span class="material-icons-outlined">
+                                    expand_more
+                                </span>
+                            </div>
+                            <div class="app__element" *ngIf="isShowHome">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    Home
+                                </div>
+                                <div class="my-2 d-flex justify-content-between align-items-center">
+                                    Page 1
+                                </div>
+                                <div class="my-2 d-flex justify-content-between align-items-center">
+                                    Page 2
+                                </div>
+                                <div class=" d-flex justify-content-between align-items-cente">
+                                    Page 3
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shop__cat  position-relative">
+                            <div class="add__click d-flex justify-content-evenly align-items-center"
+                                (click)="setIsShowShop()">
+                                SHOP
+                                <span class="material-icons-outlined">
+                                    expand_more
+                                </span>
+                            </div>
+
+                            <div class="app__element" *ngIf="isShowShop">
+                                <div class="my-2 d-flex justify-content-between align-items-center">
+                                    Shop 1
+                                </div>
+                                <div class="my-2 d-flex justify-content-between align-items-center">
+                                    Shop 2
+                                </div>
+                                <div class=" d-flex justify-content-between align-items-cente">
+                                    Shop 3
+                                </div>
+                                <div class=" d-flex justify-content-between align-items-cente">
+                                    Shop 4
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trend_cat position-relative">
+                            <div class="add__click d-flex justify-content-evenly align-items-center"
+                                (click)="setIsShowTrend()">
+                                TREND
+                                <span class="material-icons-outlined">
+                                    expand_more
+                                </span>
+                            </div>
+
+                            <div class="app__element" *ngIf="isShowTrend">
+                                <div class="my-2 d-flex justify-content-between align-items-center">
+                                    Trend 1
+                                </div>
+                                <div class="my-2 d-flex justify-content-between align-items-center">
+                                    Trend 2
+                                </div>
+                                <div class=" d-flex justify-content-between align-items-cente">
+                                    Trend 3
+                                </div>
+                                <div class=" d-flex justify-content-between align-items-cente">
+                                    Trend 4
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog__cat position-relative">
+                            <div class="add__click d-flex justify-content-evenly align-items-center"
+                                (click)="setIsShowBlog()">
+
+                                BLOG
+                                <span class="material-icons-outlined">
+                                    expand_more
+                                </span>
+                            </div>
+
+                            <div class="app__element" *ngIf="isShowBlog">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    Blog 1
+                                </div>
+                                <div class="my-2 d-flex justify-content-between align-items-center">
+                                    Blog 2
+                                </div>
+                                <div class="my-2 d-flex justify-content-between align-items-center">
+                                    Blog 3
+                                </div>
+                                <div class=" d-flex justify-content-between align-items-cente">
+                                    Blog 4
+                                </div>
+                                <div class=" d-flex justify-content-between align-items-cente">
+                                    Blog 5
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            CONTACT
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3 px-3">
+                    <span class="text-secondary">
+                        Call Support : (123) 456789
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <nav class="cc-navbar navbar navbar-expand-lg navbar-light bg-light w-100">
     <div class="container">
         <a class="navbar-brand text-uppercase   py-2 fw-bolder" routerLink="/home">
             <img class="logo" src="../../../assets/images/other/logo.png" alt="logo">
@@ -32,4 +216,4 @@
             </ul>
         </div>
     </div>
-</nav>
+</nav> -->

@@ -7,6 +7,7 @@ import { UsersComponent } from './_elements/users/users.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ProductsComponent } from './_elements/products/products.component';
 import { SubStractText } from "../../@shared/pipe/ststrac.pipe";
+import { EditProductComponent } from './_elements/edit-product/edit-product.component';
 
 @NgModule({
     declarations: [
@@ -14,7 +15,8 @@ import { SubStractText } from "../../@shared/pipe/ststrac.pipe";
         MenuComponent,
         UsersComponent,
         ProductsComponent,
-        SubStractText
+        SubStractText,
+        EditProductComponent
     ],
     imports: [
         CommonModule,
