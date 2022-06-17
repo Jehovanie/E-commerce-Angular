@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CardComponent } from '../pages/@shared/card/card.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { ALaUneComponent } from '../pages/@shared/aLaUne/a-la-une.component';
 
 
 
@@ -22,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     NavComponent,
     FooterComponent,
     CardComponent,
+    ALaUneComponent
   ],
   imports: [
     CommonModule,

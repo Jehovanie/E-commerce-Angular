@@ -22,7 +22,7 @@ import { ArticleModule } from './modules/article.module';
     LoginComponent,
     RegisterComponent,
     AboutComponent,
-    NotFoundComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
