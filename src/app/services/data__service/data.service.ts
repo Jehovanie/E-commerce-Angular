@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, throwError } from 'rxjs';
-import { tap, catchError } from 'rxjs/operators';
+import { Observable, of, throwError } from 'rxjs';
+import { tap, catchError, filter } from 'rxjs/operators';
 import { IData } from '../../interface/Idata';
 
 @Injectable({
@@ -47,5 +47,4 @@ export class DataService {
             catchError(this.handleError)
         )
     }
-
 }

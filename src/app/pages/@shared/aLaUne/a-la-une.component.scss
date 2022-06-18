@@ -1,18 +1,48 @@
 .content__image {
     position: relative;
     padding: 0;
-    z-index: -1;
+    transition: 2s;
 
     .image__a__la__une {
         width: 100%;
         height: 30%;
+        max-height: 90vh;
+
+    }
+
+    &:hover {
+        .icon {
+            display: block;
+        }
+    }
+
+    .icon {
+        display: none;
+        font-weight: bolder;
+        font-size: 2rem;
+        color: white;
+        position: absolute;
+        top: 40%;
+        cursor: pointer !important;
+    }
+
+    .left {
+        left: 7%;
+        animation: left .5s infinite linear alternate;
+
+    }
+
+    .right {
+        right: 7%;
+        animation: right .5s infinite linear alternate;
+
     }
 
     .content__titre {
         position: absolute;
         top: 40%;
-        left: 8%;
-        color: white;
+        left: 15%;
+        color: rgb(147, 142, 142);
 
         h1 {
             font-size: 4rem;
@@ -37,5 +67,25 @@
         }
 
 
+    }
+}
+
+@keyframes right {
+    0% {
+        transform: translate(-10px)
+    }
+
+    100% {
+        transform: translate(10px)
+    }
+}
+
+@keyframes left {
+    0% {
+        transform: translate(10px)
+    }
+
+    100% {
+        transform: translate(-10px)
     }
 }

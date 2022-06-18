@@ -1,6 +1,10 @@
 <div class="container-fluid p-0">
     <div class="content__image">
-        <img class="image__a__la__une" src="assets/images/car/model-2.jpg" alt="model-1">
+        <img class="image__a__la__une" src={{data.image}} alt="model-1">
+
+        <span class="left icon material-icons-outlined" (click)="handleArrowClick()">
+            chevron_left
+        </span>
 
         <div class="content__titre">
             <h1> BIG SALE</h1>
@@ -10,5 +14,8 @@
                 DISCOVER NOW
             </button>
         </div>
+        <span class="right icon material-icons-outlined" (click)="handleArrowClick()">
+            chevron_right
+        </span>
     </div>
 </div>
